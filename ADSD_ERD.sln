@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADSD_ERD", "ADSD_ERD\ADSD_ERD.csproj", "{36EF9C17-8663-4DE0-90DE-1B45608A055E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36EF9C17-8663-4DE0-90DE-1B45608A055E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EF9C17-8663-4DE0-90DE-1B45608A055E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EF9C17-8663-4DE0-90DE-1B45608A055E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EF9C17-8663-4DE0-90DE-1B45608A055E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
