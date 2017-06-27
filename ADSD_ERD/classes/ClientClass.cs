@@ -7,11 +7,11 @@ using System.Web;
 
 namespace ADSD_ERD.classes
 {
-    public class ClientClass 
+    public class ClientClass
     {
         private Int32 cid;
 
-        public Int32 Cid
+        public Int32 ClientId
         {
             get { return cid; }
             set { cid = value; }
@@ -54,7 +54,7 @@ namespace ADSD_ERD.classes
         public int save()
         {
             String sql = "INSERT INTO client(cid, name, add_no, add_line, city) " +
-                "VALUES(" + this.cid + ", '" + this.name + "', '" + this.add_no + "', '" + this.add_line + "', '" + this.city + "')";
+                "VALUES( '','" + this.name + "', '" + this.add_no + "', '" + this.add_line + "', '" + this.city + "')";
             return this.db.executeNonQuery(sql);
         }
 

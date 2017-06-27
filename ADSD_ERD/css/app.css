@@ -1,0 +1,54 @@
+﻿.wrapper {
+    margin: 0 auto;
+    width:1000px;
+}
+.left {
+    width: 200px;
+    display: block;
+    float: left;
+}
+.right {
+    width: 780px;
+    display: block;
+    float: left;
+    padding: 10px;
+}
+.top-header {
+    text-align:center;
+    font-weight:bolder;
+    background-color:#d6d3d6;
+    height:50px;
+}
+.header, .content, .form, .grid{
+    margin-top:20px;
+}
+.grid table {
+    width:100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+}
+ul li {
+    margin-top:10px; 
+    border: 1px solid #d6d3d6; 
+    width: 100%;
+    display: block;
+}
+a { 
+    all:unset;
+}
+
+.left li a {
+    margin-left:10px; 
+}
+.controllers td {
+   padding-top:20px;
+
+}
+h1 {
+    margin-top: 0px;
+    padding: 5px;
+}
+

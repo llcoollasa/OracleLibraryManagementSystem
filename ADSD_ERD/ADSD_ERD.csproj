@@ -65,6 +65,12 @@
   <ItemGroup>
     <Compile Include="classes\ClientClass.cs" />
     <Compile Include="classes\DB.cs" />
+    <Compile Include="classes\EquipmentClass.cs" />
+    <Compile Include="classes\EventClass.cs" />
+    <Compile Include="classes\EventEquipmentClass.cs" />
+    <Compile Include="classes\EventStaffClass.cs" />
+    <Compile Include="classes\StaffClass.cs" />
+    <Compile Include="classes\SupplierClass.cs" />
     <Compile Include="client.aspx.cs">
       <DependentUpon>client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
