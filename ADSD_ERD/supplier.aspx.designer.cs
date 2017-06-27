@@ -10,7 +10,7 @@
 namespace ADSD_ERD {
     
     
-    public partial class client {
+    public partial class supplier {
         
         /// <summary>
         /// form1 control.
@@ -31,13 +31,13 @@ namespace ADSD_ERD {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtCid control.
+        /// txtSupId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCid;
+        protected global::System.Web.UI.WebControls.TextBox txtSupId;
         
         /// <summary>
         /// Label2 control.
@@ -148,13 +148,13 @@ namespace ADSD_ERD {
         protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// GVClient control.
+        /// GVSupplier control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVClient;
+        protected global::System.Web.UI.WebControls.GridView GVSupplier;
         
         /// <summary>
         /// SqlDataSource1 control.

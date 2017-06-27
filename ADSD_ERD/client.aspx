@@ -12,8 +12,8 @@
         <div class="top-header"><h1>Ceylon Entertainment Service</h1></div>
         <div class="left">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="client.aspx">Client</a></li>                
+                <li><a href="home_page.aspx">Home</a></li>
+                <li><a href="client.aspx"><strong>Client</strong></a></li>                
                 <li><a href="supplier.aspx">Supplier</a></li>                
                 <li><a href="equipment.aspx">Equipment</a></li>                
                 <li><a href="staff.aspx">Staff</a></li>                
@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="right">
-            <div class="header"><strong>SUPPLIER</strong></div>
+            <div class="header"><strong>Client</strong></div>
             <div class="content">
                 <form id="form1" runat="server">
                 <div class="form">   

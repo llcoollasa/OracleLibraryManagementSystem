@@ -22,28 +22,28 @@ namespace ADSD_ERD.classes
         {
             get { return name; }
             set { name = value; }
-        }
-        private string job_role;
+        } 
+        private string add_no;
 
-        public string JobRole
+        public string AddNo
         {
-            get { return job_role; }
-            set { job_role = value; }
+            get { return add_no; }
+            set { add_no = value; }
         }
-        private string type;
+        private string add_line;
 
-        public string Type
+        public string AddLine
         {
-            get { return type; }
-            set { type = value; }
+            get { return add_line; }
+            set { add_line = value; }
         }
-        private bool availability;
+        private string city;
 
-        public bool Availability
+        public string City
         {
-            get { return availability; }
-            set { availability = value; }
-        }
+            get { return city; }
+            set { city = value; }
+        } 
 
         private DB db = null;
         public SupplierClass()
@@ -53,37 +53,37 @@ namespace ADSD_ERD.classes
 
         public int save()
         {
-            String sql = "INSERT INTO staff(sid, name, job_role, type, availability) " +
-                "VALUES(" + this.sup_id + ", '" + this.name + "', '" + this.job_role + "', '" + this.type + "', " + this.availability + ")";
+            String sql = "INSERT INTO supplier(sup_id, name, add_no, add_line, city) " +
+                "VALUES('', '" + this.name + "', '" + this.add_no + "', '" + this.add_line + "', '" + this.city + "')";
             return this.db.executeNonQuery(sql);
         }
 
         public int update()
         {
-            String sql = "UPDATE staff SET name = '" + this.name + "', job_role='" + this.job_role + "', type='" + this.type +
-                "', availability=" + this.availability + " WHERE sup_id = " + this.sup_id;
+            String sql = "UPDATE supplier SET name = '" + this.name + "', add_no='" + this.add_no + "', add_line='" + this.add_line +
+                "', city=" + this.city + " WHERE sup_id = " + this.sup_id;
             return this.db.executeNonQuery(sql);
         }
 
         public int delete()
         {
-            String sql = "DELETE FROM staff WHERE sup_id = " + this.sup_id;
+            String sql = "DELETE FROM supplier WHERE sup_id = " + this.sup_id;
             return this.db.executeNonQuery(sql);
         }
 
         public bool get()
         {
             bool result = false;
-            String sql = "SELECT * FROM staff WHERE sup_id = " + this.sup_id;
+            String sql = "SELECT * FROM supplier WHERE sup_id = " + this.sup_id;
             DataTable dt = new DataTable();
             dt = this.db.getResult(sql);
 
             if (dt.Rows.Count > 0)
             {
                 this.name = dt.Rows[0].Field<String>("name");
-                this.job_role = dt.Rows[0].Field<String>("job_role");
-                this.type = dt.Rows[0].Field<String>("type");
-                this.availability = dt.Rows[0].Field<Boolean>("availability");
+                this.add_no = dt.Rows[0].Field<String>("add_no");
+                this.add_line = dt.Rows[0].Field<String>("add_line");
+                this.city = dt.Rows[0].Field<String>("city");
                 result = true;
             }
             return result;
@@ -92,13 +92,13 @@ namespace ADSD_ERD.classes
 
         public ArrayList getAll()
         {
-            String sql = "SELECT * FROM staff";
+            String sql = "SELECT * FROM supplier";
             return makeCollection(sql);
         }
 
         public ArrayList search(Dictionary<string, string> parameters)
         {
-            String sql = "SELECT * FROM staff WHERE ";
+            String sql = "SELECT * FROM supplier WHERE ";
             sql = this.db.prepareSearchSql(parameters, sql);
             return makeCollection(sql);
         }
@@ -118,9 +118,9 @@ namespace ADSD_ERD.classes
                     SupplierClass supplier = new SupplierClass();
                     supplier.SupplierId = item.Field<Int32>("sup_id");
                     supplier.Name = item.Field<String>("name");
-                    supplier.JobRole = item.Field<String>("job_role");
-                    supplier.Type = item.Field<String>("type");
-                    supplier.Availability = item.Field<bool>("availability");
+                    supplier.AddNo = item.Field<String>("add_no");
+                    supplier.AddLine = item.Field<String>("add_line");
+                    supplier.City = item.Field<String>("city");
                     clientCollection.Add(supplier);
                 }
             }
