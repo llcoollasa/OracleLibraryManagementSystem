@@ -90,7 +90,7 @@
                     CellPadding="4"
                     DataSourceID="SqlDataSource2"
                     ForeColor="Black"
-                    GridLines="Vertical" OnSelectedIndexChanged="GVEquipment_SelectedIndexChanged"
+                    GridLines="Vertical" OnSelectedIndexChanged="GVEquipment_SelectedIndexChanged" OnLoad="GVEquipment_Load"
                     >
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
