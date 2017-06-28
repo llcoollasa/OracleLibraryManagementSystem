@@ -94,7 +94,7 @@
                     >
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:BoundField DataField="EQID" HeaderText="EQID" ReadOnly="True" SortExpression="EQID" />
+                            <asp:BoundField DataField="EQID" HeaderText="EQID" ReadOnly="True" SortExpression="EQID"/>
                             <asp:BoundField DataField="SUP_ID" HeaderText="SUP ID" ReadOnly="True" SortExpression="SUP_ID" />
                             <asp:BoundField DataField="NAME" HeaderText="SUP NAME" ReadOnly="True" SortExpression="NAME" />
                             <asp:BoundField DataField="NAME1" HeaderText="NAME" ReadOnly="True" SortExpression="NAME1" />

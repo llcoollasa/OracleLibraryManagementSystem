@@ -50,9 +50,9 @@ namespace ADSD_ERD
             }
 
             
-            txtName.Text = GVEquipment.SelectedRow.Cells[2].Text;
-            txtQty.Text = GVEquipment.SelectedRow.Cells[3].Text;
-            DDLType.SelectedValue = GVEquipment.SelectedRow.Cells[4].Text;
+            txtName.Text = GVEquipment.SelectedRow.Cells[3].Text;
+            txtQty.Text = GVEquipment.SelectedRow.Cells[4].Text;
+            DDLType.SelectedValue = GVEquipment.SelectedRow.Cells[5].Text;
             ChkAvailability.Checked = Convert.ToBoolean(Convert.ToInt16(GVEquipment.SelectedRow.Cells[6].Text));
         }
 
@@ -88,7 +88,13 @@ namespace ADSD_ERD
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (txteqid.Text.Length > 0)
+            {
+                EquipmentClass equipment = new EquipmentClass();
+                equipment.EquipmentId = Convert.ToInt32(txteqid.Text);
+                equipment.delete();
+                Response.Redirect("equipment.aspx");
+            }
         }
     }
 }

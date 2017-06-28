@@ -81,7 +81,7 @@ namespace ADSD_ERD.classes
             String sql = "";
             if (this.Supplier == null)
             {
-                sql = "UPDATE equipment SET sup_id = '', name='" + this.name + "', qty=" + this.qty + ", type='" + this.type +
+                sql = "UPDATE equipment SET sup_id = null, name='" + this.name + "', qty=" + this.qty + ", type='" + this.type +
                 "', available=" + Convert.ToByte(this.available) + " WHERE eqid = " + this.eqid;
             }
             else
