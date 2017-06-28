@@ -60,15 +60,36 @@ namespace ADSD_ERD.classes
 
         public int save()
         {
-            String sql = "INSERT INTO equipment(equid, sup_id, name, qty, type, available) " +
-                "VALUES(" + this.eqid + ", " + this.Supplier.SupplierId + ", '" + this.name + "', " + this.qty + ", '" + this.type + "' " + this.available + ")";
+            String sql = "";
+            if (this.Supplier == null)
+            {
+                sql = "INSERT INTO equipment( sup_id, name, qty, type, available) " +
+                "VALUES( '', '" + this.name + "', " + this.qty + ", '" + this.type + "' , " + Convert.ToByte(this.available) + ")";
+            }
+            else
+            {
+                sql = "INSERT INTO equipment( sup_id, name, qty, type, available) " +
+                "VALUES( " + this.Supplier.SupplierId + ", '" + this.name + "', " + this.qty + ", '" + this.type + "' , " + Convert.ToByte(this.available) + ")";
+            }
+             
             return this.db.executeNonQuery(sql);
         }
 
         public int update()
         {
-            String sql = "UPDATE equipment SET sup_id = " + this.Supplier.SupplierId + ", name='" + this.name + "', qty=" + this.qty + ", type='" + this.type +
-                "', available=" + this.available + " WHERE eqid = " + this.eqid;
+
+            String sql = "";
+            if (this.Supplier == null)
+            {
+                sql = "UPDATE equipment SET sup_id = '', name='" + this.name + "', qty=" + this.qty + ", type='" + this.type +
+                "', available=" + Convert.ToByte(this.available) + " WHERE eqid = " + this.eqid;
+            }
+            else
+            {
+                sql = "UPDATE equipment SET sup_id = " + this.Supplier.SupplierId + ", name='" + this.name + "', qty=" + this.qty + ", type='" + this.type +
+                "', available=" + Convert.ToByte(this.available) + " WHERE eqid = " + this.eqid;
+            }
+
             return this.db.executeNonQuery(sql);
         }
 

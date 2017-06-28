@@ -53,15 +53,15 @@ namespace ADSD_ERD.classes
 
         public int save()
         {
-            String sql = "INSERT INTO staff(sid, name, job_role, type, availability) " +
-                "VALUES(" + this.sid + ", '" + this.name + "', '" + this.job_role + "', '" + this.type + "', " + this.availability + ")";
+            String sql = "INSERT INTO staff( name, job_role, type, availability) " +
+                "VALUES( '" + this.name + "', '" + this.job_role + "', '" + this.type + "', " +  Convert.ToByte( this.availability )+ ")";
             return this.db.executeNonQuery(sql);
         }
 
         public int update()
         {
             String sql = "UPDATE staff SET name = '" + this.name + "', job_role='" + this.job_role + "', type='" + this.type +
-                "', availability=" + this.availability + " WHERE sid = " + this.sid;
+                "', availability=" + Convert.ToByte(this.availability) + " WHERE sid = " + this.sid;
             return this.db.executeNonQuery(sql);
         }
 
