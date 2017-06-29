@@ -80,10 +80,10 @@ namespace ADSD_ERD.classes
 
             if (dt.Rows.Count > 0)
             {
-                this.name = dt.Rows[0].Field<String>("name");
-                this.job_role = dt.Rows[0].Field<String>("job_role");
-                this.type = dt.Rows[0].Field<String>("type");
-                this.availability = dt.Rows[0].Field<Boolean>("availability");
+                this.name = Convert.ToString(dt.Rows[0]["name"]);
+                this.job_role = Convert.ToString(dt.Rows[0]["job_role"]);
+                this.type = Convert.ToString(dt.Rows[0]["type"]);
+                this.availability =Convert.ToBoolean( Convert.ToInt16(dt.Rows[0]["availability"]));
                 result = true;
             }
             return result;

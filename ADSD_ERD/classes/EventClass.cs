@@ -67,15 +67,15 @@ namespace ADSD_ERD.classes
 
         public int save()
         {
-            String sql = "INSERT INTO event(cid, name, number, date, location, project_cost) " +
-                "VALUES(" + this.Client.ClientId + ", '" + this.name + "', '" + this.number + "', '" + this.date + "', '" + this.location + "', " + this.project_cost + ")";
+            String sql = "INSERT INTO event(cid, name, \"number\", \"date\", location, project_cost) " +
+                "VALUES(" + this.Client.ClientId + ", '" + this.name + "', '" + this.number + "', to_date('" + this.date.ToString("yyyy-MM-dd") + "','YYYY-MM-DD'), '" + this.location + "', " + this.project_cost + ")";
             return this.db.executeNonQuery(sql);
         }
 
         public int update()
         {
-            String sql = "UPDATE event SET cid = " + this.Client.ClientId + ", name='" + this.name + "', number='" + this.number +
-                "', date='" + this.date + "', location='" + this.location + "', project_cost=" + this.project_cost + " WHERE eid = " + this.eid;
+            String sql = "UPDATE event SET cid = " + this.Client.ClientId + ", name='" + this.name + "', \"number\"='" + this.number +
+                "', \"date\"=to_date('" + this.date.ToString("yyyy-MM-dd") + "','YYYY-MM-DD'), location='" + this.location + "', project_cost=" + this.project_cost + " WHERE eid = " + this.eid;
             return this.db.executeNonQuery(sql);
         }
 
@@ -96,14 +96,14 @@ namespace ADSD_ERD.classes
             {
                 //Assign Client
                 this.Client = new ClientClass();
-                this.Client.ClientId = dt.Rows[0].Field<Int32>("cid");
+                this.Client.ClientId =Convert.ToInt32( dt.Rows[0]["CID"]);
                 this.Client.get();
 
-                this.name = dt.Rows[0].Field<String>("name");
-                this.number = dt.Rows[0].Field<String>("number");
-                this.date = dt.Rows[0].Field<DateTime>("date");
-                this.location = dt.Rows[0].Field<String>("location");
-                this.project_cost = dt.Rows[0].Field<Decimal>("project_cost");
+                this.name =Convert.ToString( dt.Rows[0]["name"]);
+                this.number = Convert.ToString(dt.Rows[0]["number"]);
+                this.date = Convert.ToDateTime(dt.Rows[0]["date"]);
+                this.location = Convert.ToString(dt.Rows[0]["location"]);
+                this.project_cost = Convert.ToDecimal(dt.Rows[0]["project_cost"]);
                 result = true;
             }
             return result;

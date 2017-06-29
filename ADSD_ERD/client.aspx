@@ -18,9 +18,9 @@
                 <li><a href="equipment.aspx">Equipment</a></li>                
                 <li><a href="staff.aspx">Staff</a></li>                
                 <li><a href="event.aspx">Event</a></li>                
-                <li><a href="event-staff.aspx">Event Staff</a></li>                
-                <li><a href="event-equipment.aspx">Event Equipments</a></li>                
-                <li><a href="event-requirement-form.aspx">Event Requirement Form</a></li>
+                <li><a href="event_staff.aspx">Event Staff</a></li>                
+                <li><a href="event_equipment.aspx">Event Equipments</a></li>                
+                <li><a href="event_requirement_form.aspx">Event Requirement Form</a></li>
             </ul>
         </div>
         <div class="right">

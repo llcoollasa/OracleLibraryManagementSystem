@@ -96,5 +96,10 @@ namespace ADSD_ERD
                 Response.Redirect("equipment.aspx");
             }
         }
+
+        protected void GVEquipment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

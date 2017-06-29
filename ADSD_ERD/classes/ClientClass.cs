@@ -80,7 +80,7 @@ namespace ADSD_ERD.classes
 
             if (dt.Rows.Count > 0)
             {
-                this.name = dt.Rows[0].Field<String>("first");
+                this.name = dt.Rows[0].Field<String>("name");
                 this.add_no = dt.Rows[0].Field<String>("add_no");
                 this.add_line = dt.Rows[0].Field<String>("add_line");
                 this.city = dt.Rows[0].Field<String>("city");

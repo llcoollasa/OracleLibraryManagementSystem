@@ -18,9 +18,9 @@
                 <li><a href="equipment.aspx"><strong>Equipment</strong></a></li>
                 <li><a href="staff.aspx">Staff</a></li>
                 <li><a href="event.aspx">Event</a></li>
-                <li><a href="event-staff.aspx">Event Staff</a></li>
-                <li><a href="event-equipment.aspx">Event Equipments</a></li>
-                <li><a href="event-requirement-form.aspx">Event Requirement Form</a></li>
+                <li><a href="event_staff.aspx">Event Staff</a></li>
+                <li><a href="event_equipment.aspx">Event Equipments</a></li>
+                <li><a href="event_requirement_form.aspx">Event Requirement Form</a></li>
             </ul>
         </div>
         <div class="right">
@@ -39,7 +39,7 @@
                               <asp:DropDownList ID="DDLSupplier" runat="server" DataSourceID="SqlDataSourceSupplier" DataTextField="NAME" DataValueField="SUP_ID">
                                   <asp:ListItem>None</asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:SqlDataSource ID="SqlDataSourceSupplier" runat="server" ConnectionString="<%$ ConnectionStrings:CESConnection %>" ProviderName="<%$ ConnectionStrings:CESConnection.ProviderName %>" SelectCommand="SELECT SUP_ID, &quot;NAME&quot; FROM LASANTHA.SUPPLIER UNION SELECT 0 AS EXPR1, 'None' AS EXPR2 FROM dual"></asp:SqlDataSource>
+                                <asp:SqlDataSource ID="SqlDataSourceSupplier" runat="server" ConnectionString="<%$ ConnectionStrings:CESConnection %>" ProviderName="<%$ ConnectionStrings:CESConnection.ProviderName %>" SelectCommand="SELECT SUP_ID, &quot;NAME&quot; FROM SUPPLIER UNION SELECT 0 AS EXPR1, 'None' AS EXPR2 FROM dual"></asp:SqlDataSource>
                             </td>
                         </tr>
                         <tr>

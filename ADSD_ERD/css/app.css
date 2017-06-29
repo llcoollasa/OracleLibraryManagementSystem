@@ -51,4 +51,12 @@ h1 {
     margin-top: 0px;
     padding: 5px;
 }
+.event {
+    width: 390px;
+    float:left;
+}
 
+.staff {
+    width: 390px;
+    float:left;
+}

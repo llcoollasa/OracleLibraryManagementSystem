@@ -61,6 +61,8 @@
     <Content Include="client.aspx" />
     <Content Include="css\app.css" />
     <Content Include="Equipment.aspx" />
+    <Content Include="event.aspx" />
+    <Content Include="event_staff.aspx" />
     <Content Include="home_page.aspx" />
     <Content Include="staff.aspx" />
     <Content Include="supplier.aspx" />
@@ -88,6 +90,20 @@
     </Compile>
     <Compile Include="Equipment.aspx.designer.cs">
       <DependentUpon>Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="event.aspx.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="event.aspx.designer.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="event_staff.aspx.cs">
+      <DependentUpon>event_staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="event_staff.aspx.designer.cs">
+      <DependentUpon>event_staff.aspx</DependentUpon>
     </Compile>
     <Compile Include="home_page.aspx.cs">
       <DependentUpon>home_page.aspx</DependentUpon>
