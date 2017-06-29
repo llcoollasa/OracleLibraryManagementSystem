@@ -60,3 +60,11 @@ h1 {
     width: 390px;
     float:left;
 }
+
+.clearFloat { 
+    clear:both;
+}
+
+.control {
+    margin-top: 30px;
+}

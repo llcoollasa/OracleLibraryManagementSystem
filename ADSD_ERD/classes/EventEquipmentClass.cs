@@ -40,7 +40,7 @@ namespace ADSD_ERD.classes
 
         public int save()
         {
-            String sql = "INSERT INTO event_equipment(eid, equid, qty) " +
+            String sql = "INSERT INTO event_equipment(eid, eqid, qty) " +
                 "VALUES(" + this.Event.EventId + ", " + this.Equipment.EquipmentId + ", " + this.Quantity + ")";
             return this.db.executeNonQuery(sql);
         }

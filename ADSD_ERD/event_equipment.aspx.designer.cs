@@ -10,7 +10,7 @@
 namespace ADSD_ERD {
     
     
-    public partial class event_staff {
+    public partial class event_equipment {
         
         /// <summary>
         /// Head1 control.
@@ -139,22 +139,22 @@ namespace ADSD_ERD {
         protected global::System.Web.UI.WebControls.Label lProjectCost;
         
         /// <summary>
-        /// DDLStaff control.
+        /// DDLEquipment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLStaff;
+        protected global::System.Web.UI.WebControls.DropDownList DDLEquipment;
         
         /// <summary>
-        /// SqlDataSourceEquipment control.
+        /// SqlDataSourceEQ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceEquipment;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceEQ;
         
         /// <summary>
         /// lblStafName control.
@@ -175,22 +175,22 @@ namespace ADSD_ERD {
         protected global::System.Web.UI.WebControls.Label lStafName;
         
         /// <summary>
-        /// lblJobRole control.
+        /// lblqty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblJobRole;
+        protected global::System.Web.UI.WebControls.Label lblqty;
         
         /// <summary>
-        /// lJobRole control.
+        /// lQty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lJobRole;
+        protected global::System.Web.UI.WebControls.Label lQty;
         
         /// <summary>
         /// lblType control.
@@ -209,6 +209,15 @@ namespace ADSD_ERD {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lType;
+        
+        /// <summary>
+        /// txtAllocatedQty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAllocatedQty;
         
         /// <summary>
         /// btnAdd control.

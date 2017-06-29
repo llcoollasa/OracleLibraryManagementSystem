@@ -108,15 +108,19 @@ namespace ADSD_ERD.classes
 
             if (dt.Rows.Count > 0)
             {
-                //Assign Supplier
-                this.Supplier = new SupplierClass();
-                this.Supplier.SupplierId = dt.Rows[0].Field<Int32>("sup_id");
-                this.Supplier.get();
+                if (dt.Rows[0]["sup_id"] != DBNull.Value) 
+                {
+                    //Assign Supplier
+                    this.Supplier = new SupplierClass();
+                    this.Supplier.SupplierId = Convert.ToInt32(dt.Rows[0]["sup_id"]);
+                    this.Supplier.get();
+                }
+                
 
-                this.name = dt.Rows[0].Field<String>("name");
-                this.qty = dt.Rows[0].Field<Int32>("qty");
-                this.type = dt.Rows[0].Field<String>("type");
-                this.available = dt.Rows[0].Field<Boolean>("available");
+                this.name = Convert.ToString(dt.Rows[0]["name"]);
+                this.qty = Convert.ToInt32(dt.Rows[0]["qty"]);
+                this.type = Convert.ToString(dt.Rows[0]["type"]);
+                this.available = Convert.ToBoolean(Convert.ToInt32(dt.Rows[0]["available"]));
                 result = true;
             }
             return result;

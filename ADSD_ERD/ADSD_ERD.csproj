@@ -62,6 +62,7 @@
     <Content Include="css\app.css" />
     <Content Include="Equipment.aspx" />
     <Content Include="event.aspx" />
+    <Content Include="event_equipment.aspx" />
     <Content Include="event_staff.aspx" />
     <Content Include="home_page.aspx" />
     <Content Include="staff.aspx" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="event.aspx.designer.cs">
       <DependentUpon>event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="event_equipment.aspx.cs">
+      <DependentUpon>event_equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="event_equipment.aspx.designer.cs">
+      <DependentUpon>event_equipment.aspx</DependentUpon>
     </Compile>
     <Compile Include="event_staff.aspx.cs">
       <DependentUpon>event_staff.aspx</DependentUpon>
