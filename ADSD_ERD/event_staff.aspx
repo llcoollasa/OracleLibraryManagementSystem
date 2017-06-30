@@ -20,7 +20,7 @@
                 <li><a href="event.aspx">Event</a></li>
                 <li><a href="event_staff.aspx"><strong>Event Staff</strong></a></li>
                 <li><a href="event_equipment.aspx">Event Equipments</a></li>
-                <li><a href="event_requirement-form.aspx">Event Requirement Form</a></li>
+                <li><a href="event_requirement_form.aspx">Event Requirement Form</a></li>
             </ul>
         </div>
         <div class="right">

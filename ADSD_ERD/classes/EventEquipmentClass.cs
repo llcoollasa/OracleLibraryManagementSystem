@@ -112,19 +112,26 @@ namespace ADSD_ERD.classes
 
                     //Assign Event
                     eventEquipment.Event = new EventClass();
-                    eventEquipment.Event.EventId = item.Field<Int32>("eid");
+                    eventEquipment.Event.EventId = Convert.ToInt32(item["eid"]);
                     eventEquipment.Event.get();
 
                     //Assign Equipment
                     eventEquipment.Equipment = new EquipmentClass();
-                    eventEquipment.Equipment.EquipmentId = item.Field<Int32>("equid");
+                    eventEquipment.Equipment.EquipmentId = Convert.ToInt32(item["eqid"]);
                     eventEquipment.Equipment.get();
-                    
-                    eventEquipment.Quantity = item.Field<Int32>("qty");
+
+                    eventEquipment.Quantity = Convert.ToInt32(item["qty"]);
                     eventEquipmentCollection.Add(eventEquipment);
 
                 }
             }
+            return eventEquipmentCollection;
+        }
+
+        public ArrayList getEquipments()
+        {
+            String sql = "SELECT * FROM event_equipment WHERE EID=" + this.Event.EventId;
+            ArrayList eventEquipmentCollection = makeCollection(sql);
             return eventEquipmentCollection;
         }
 

@@ -68,3 +68,8 @@ h1 {
 .control {
     margin-top: 30px;
 }
+
+.header h1 {
+    text-align:center;
+
+}

@@ -98,12 +98,12 @@ namespace ADSD_ERD.classes
 
                     //Assign Event
                     eventStaff.Event = new EventClass();
-                    eventStaff.Event.EventId = item.Field<Int32>("eid");
+                    eventStaff.Event.EventId =Convert.ToInt32(item["eid"]);
                     eventStaff.Event.get();
 
-                    //Assign Equipment
+                    //Assign staff
                     eventStaff.Staff = new StaffClass();
-                    eventStaff.Staff.StaffId = item.Field<Int32>("sid");
+                    eventStaff.Staff.StaffId = Convert.ToInt32(item["sid"]);
                     eventStaff.Staff.get();
 
                     eventStaffCollection.Add(eventStaff);
@@ -113,5 +113,12 @@ namespace ADSD_ERD.classes
             return eventStaffCollection;
         }
 
+
+        public ArrayList getStaff()
+        {
+            String sql = "SELECT * FROM event_staff WHERE EID="+ this.Event.EventId;
+            ArrayList eventStaffCollection = makeCollection(sql);
+            return eventStaffCollection;
+        }
     }
 }

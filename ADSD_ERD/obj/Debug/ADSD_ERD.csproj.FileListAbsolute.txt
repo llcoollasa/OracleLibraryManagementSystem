@@ -2,3 +2,4 @@ C:\Users\acer\Documents\Visual Studio 2012\Projects\ADSD_ERD\ADSD_ERD\bin\ADSD_E
 C:\Users\acer\Documents\Visual Studio 2012\Projects\ADSD_ERD\ADSD_ERD\bin\ADSD_ERD.pdb
 C:\Users\acer\Documents\Visual Studio 2012\Projects\ADSD_ERD\ADSD_ERD\obj\Debug\ADSD_ERD.dll
 C:\Users\acer\Documents\Visual Studio 2012\Projects\ADSD_ERD\ADSD_ERD\obj\Debug\ADSD_ERD.pdb
+C:\Users\acer\Documents\Visual Studio 2012\Projects\ADSD_ERD\ADSD_ERD\obj\Debug\ADSD_ERD.csprojResolveAssemblyReference.cache
