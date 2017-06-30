@@ -10,11 +10,7 @@ namespace ADSD_ERD
 {
     public partial class client : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         protected void GVClient_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtCid.Text = GVClient.SelectedRow.Cells[0].Text;

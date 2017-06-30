@@ -25,11 +25,11 @@
         </div>
         <div class="right">
             <div class="header"></div>
-            <div class="content" style="width:500px; margin:0 auto;text-align:center;margin-top: 100px;">
+            <div class="content" style="width:500px; margin:0 auto;text-align:center;margin-top: 60px;">
                 <strong>Welcome to Ceylon Entertainment Service. <br />Please use navigation bar on left side to continue to operations.</strong>
-            </div>
-
+                <img src ="images/event.jpg" />
             </div>
         </div>
+    </div>        
 </body>
 </html>
